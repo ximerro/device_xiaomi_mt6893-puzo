@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Expose rear auxiliary lenses to Aperture. -->
+    <bool name="config_enableAuxCameras">true</bool>
+
+    <!-- Keep only known usable rear aux IDs on agate. -->
+    <string-array name="config_ignoredAuxCameraIds">
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <!-- Do not suppress logical multi-camera devices on this target. -->
+    <bool name="config_ignoreLogicalAuxCameras">false</bool>
+
+    <!-- Ensure CameraX does not drop these rear aux devices. -->
+    <string-array name="config_backwardCompatibleCameraIds">
+        <item>2</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Add production video mode overrides for exposed rear cameras. -->
+    <string-array name="config_additionalVideoConfigurations">
+        <item>0</item> <item>fhd</item> <item>60</item>
+        <item>0</item> <item>uhd</item> <item>30</item>
+        <item>2</item> <item>fhd</item> <item>60</item>
+        <item>5</item> <item>fhd</item> <item>60</item>
+    </string-array>
+
+    <!-- Logical zoom presets mapped to main rear camera. -->
+    <string-array name="config_logicalZoomRatios">
+        <item>0</item> <item>0.6</item> <item>0.6</item>
+        <item>0</item> <item>1.0</item> <item>1.0</item>
+        <item>0</item> <item>1.9</item> <item>1.9</item>
+    </string-array>
+</resources>

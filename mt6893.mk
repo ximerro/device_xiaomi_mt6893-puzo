@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlayMT6893 \
     CarrierConfigOverlayMT6893 \
     FrameworksResOverlayMT6893 \
     SettingsOverlayMT6893 \
