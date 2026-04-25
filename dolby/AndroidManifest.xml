@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.aospa.dolby.xiaomi"
+    package="co.aospa.dolby"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -13,7 +13,8 @@
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false"
         android:label="@string/dolby_title"
-        android:persistent="true">
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver
             android:name=".BootCompletedReceiver"
@@ -26,7 +27,6 @@
         <activity
             android:name=".DolbyActivity"
             android:label="@string/dolby_title"
-            android:theme="@style/Theme.SubSettingsBase"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -44,13 +44,12 @@
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary_uri"
-                       android:value="content://co.aospa.dolby.xiaomi.summary/dolby" />
+                       android:value="content://co.aospa.dolby.summary/dolby" />
         </activity>
 
         <activity
             android:name=".geq.EqualizerActivity"
             android:label="@string/dolby_preset"
-            android:theme="@style/Theme.SubSettingsBase"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -71,7 +70,7 @@
 
         <provider
             android:name=".SummaryProvider"
-            android:authorities="co.aospa.dolby.xiaomi.summary">
+            android:authorities="co.aospa.dolby.summary">
         </provider>
 
     </application>
